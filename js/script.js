@@ -11,7 +11,14 @@ const DisplayPhones = phones => {
     const PhoneContainer = document.getElementById('phone_containers');
     // clear previous results
     PhoneContainer.textContent = "";
+    const ShowBtn = document.getElementById('show_btn');
+    if (phones.length > 9)
+        ShowBtn.classList.remove('hidden');
+    else
+        ShowBtn.classList.add('hidden');
 
+    // show the minimum number of phone
+    phones = phones.slice(0, 9);
     phones.forEach(phone => {
         console.log(phone);
         // create a div 
