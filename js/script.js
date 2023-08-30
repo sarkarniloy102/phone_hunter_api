@@ -41,14 +41,25 @@ const DisplayPhones = phones => {
         // adding div in container
         PhoneContainer.appendChild(PhoneCard);
     });
+    // calling toggle function to stop loading
+    ToggleLoadSpin(false);
 
 }
 // finding Phone Card by input value
 const SearchHandle = () => {
+    ToggleLoadSpin(true);
     const SearchField = document.getElementById('Search_Field');
     const SearchText = SearchField.value;
     LoadPhone(SearchText);
 }
 
+// toggle load spinner
+const ToggleLoadSpin = (isload) => {
+    const LoadSpin = document.getElementById('load_spin');
+    if (isload)
+        LoadSpin.classList.remove('hidden');
+    else
+        LoadSpin.classList.add('hidden');
+}
 
 LoadPhone();

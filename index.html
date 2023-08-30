@@ -20,18 +20,28 @@
 
     <!-- main part start -->
     <main class="container mx-auto my-5">
+
+        <!-- search user input -->
         <section class=" mt-5">
+
             <input id="Search_Field" type="text" placeholder="Type here"
                 class="input w-full max-w-xs border border-black " />
             <button onclick="SearchHandle()" class="btn bg-orange-400">search</button>
         </section>
+        <!-- add load spinner -->
+        <div class="text-center ">
+            <span id="load_spin" class="hidden loading loading-spinner text-error my-56"></span>
+        </div>
         <!-- Phone Cart section -->
         <section class="mt-4">
             <div id="phone_containers" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
             </div>
             <!-- show button -->
-            <button id="show_btn" class="hidden btn bg-teal-700 text-white container mx-auto my-4">Show All</button>
+            <div class="text-center">
+                <button id="show_btn" class="hidden btn bg-teal-700 text-white  my-4">Show All</button>
+            </div>
+
 
         </section>
 
